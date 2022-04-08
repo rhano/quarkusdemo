@@ -10,11 +10,13 @@ public class TestFilter implements Filter {
 
         String myParam = request.getParameter("name");
 
-        if(!"blockTheRequest".equals(myParam)){
+        if(!"Dr. Evil".equalsIgnoreCase(myParam)){
             filterChain.doFilter(request, response);
             return;
         }
-        response.getWriter().write("This request is filtered");
+        PrintWriter pw = response.getWriter();
+        pw.print("<html><head><link rel=\"stylesheet\" href=\"css/style.css\"></head>");
+        response.getWriter().write("<div class=\"container\"><span><font size='20' color='white'>You have been blocked " +myParam + "! </font></span><div></html>");
     }
 
     public void destroy() {
