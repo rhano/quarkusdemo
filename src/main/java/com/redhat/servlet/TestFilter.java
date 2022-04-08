@@ -16,7 +16,7 @@ public class TestFilter implements Filter {
         }
         PrintWriter pw = response.getWriter();
         pw.print("<html><head><link rel=\"stylesheet\" href=\"css/style.css\"></head>");
-        response.getWriter().write("<div class=\"container\"><span><font size='20' color='white'>You have been blocked " +myParam + "! </font></span><div></html>");
+        response.getWriter().write("<div class=\"container\"><center><img src=\"images/blocked.jpg\"  width=\"200\" height=\"200\" /></center><br/><span><font size='20' color='white'>You have been blocked " +myParam + "! </font></span><div></html>");
     }
 
     public void destroy() {
