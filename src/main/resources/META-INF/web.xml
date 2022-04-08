@@ -1,0 +1,23 @@
+<web-app>
+
+<servlet>
+   <servlet-name>TestServlet</servlet-name>
+   <servlet-class>com.redhat.servlet.TestServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>TestServlet</servlet-name>
+   <url-pattern>/welcome</url-pattern>
+</servlet-mapping>
+
+<filter>
+    <filter-name>TestFilter</filter-name>
+    <filter-class>com.redhat.servlet.TestFilter</filter-class>
+</filter>
+
+<filter-mapping>
+    <filter-name>TestFilter</filter-name>
+    <url-pattern>/welcome</url-pattern>
+</filter-mapping>
+
+</web-app>
