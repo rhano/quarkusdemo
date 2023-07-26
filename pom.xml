@@ -48,7 +48,7 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-undertow</artifactId>
     </dependency>
-   
+  </dependencies>
   <build>
     <plugins>
       <plugin>
